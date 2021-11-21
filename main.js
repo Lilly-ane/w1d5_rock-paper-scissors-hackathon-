@@ -54,3 +54,42 @@ var computerMove="scissor"
 if(playerMove==="scissor" & computerMove==="scissor"){
 console.log("Draw")
 }
+
+ //## Task 2: Function
+//Take the if statements that you've written and tested and put them into a function. The variables from before should now be taken in as parameters so that you can call the function with any two moves. Instead of printing the result to the console, the function should return:
+
+//- `1` if player1 wins
+//- `0` if it is a draw
+//- `-1` if player1 loses (player2 wins)
+
+function getWinner(player1, player2) {
+     if(player1 ==="rock" & player2 ==="paper"){
+     return 1;
+     }
+     if(player1 ==="paper" & player2 ==="rock"){
+        return -1;
+        }
+     if(player1==="paper" & player2 ==="paper"){
+        return 0;
+     }
+     if(player1==="rock" & player2 ==="rock"){
+        return 0;
+     }
+     if(player1==="scissor" & player2==="rock"){
+        return -1;
+     }
+    
+     if(player1==="paper" & player2==="scissor"){
+     return -1;
+     }
+    
+     if(player1==="scissor" & player2==="paper"){
+     return -1
+     }
+    
+     if(player1==="scissor" & player2==="scissor"){
+     return 0;
+     }
+}
+let result = getWinner("paper", "paper");
+console.log(result);
