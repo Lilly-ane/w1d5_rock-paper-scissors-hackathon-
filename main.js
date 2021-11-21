@@ -97,6 +97,14 @@ console.log(result);
 //## Task 3: User Input
 //Using `prompt`, get a user-inputted value for the player move. Then call your function with that value as the player move and the hard-coded computer move. Display the result using `alert`.
 //This will be deemed as complete when you can input any move for the player move and hard-code any move for the computer move and see the correct result (1, 0, or -1) in the alert.
+let Player1choice = prompt("Please enter your choice");
+//rockalert(getWinner(Player1choice,"rock"));
 
-let Player1choice = prompt("Please enter your choise");
-alert(getWinner(Player1choice,"rock"));
+//## Task 4: Computer Player
+
+//Write a function that generates a random computer move. Use that function to make a dynamic game where the computer move is randomly chosen every time instead of being hard-coded.
+
+const RandomComputerchoice = ["rock", "paper", "scissor"];
+let ComputerChoice = RandomComputerchoice[Math.floor(Math.random() * 2)];
+console.log(ComputerChoice);
+alert(getWinner(Player1choice,ComputerChoice));
