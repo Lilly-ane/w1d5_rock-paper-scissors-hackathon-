@@ -64,10 +64,10 @@ console.log("Draw")
 
 function getWinner(player1, player2) {
      if(player1 ==="rock" & player2 ==="paper"){
-     return 1;
+     return -1;
      }
      if(player1 ==="paper" & player2 ==="rock"){
-        return -1;
+        return 1;
         }
      if(player1==="paper" & player2 ==="paper"){
         return 0;
@@ -84,7 +84,7 @@ function getWinner(player1, player2) {
      }
     
      if(player1==="scissor" & player2==="paper"){
-     return -1
+     return 1
      }
     
      if(player1==="scissor" & player2==="scissor"){
@@ -93,3 +93,10 @@ function getWinner(player1, player2) {
 }
 let result = getWinner("paper", "paper");
 console.log(result);
+
+//## Task 3: User Input
+//Using `prompt`, get a user-inputted value for the player move. Then call your function with that value as the player move and the hard-coded computer move. Display the result using `alert`.
+//This will be deemed as complete when you can input any move for the player move and hard-code any move for the computer move and see the correct result (1, 0, or -1) in the alert.
+
+let Player1choice = prompt("Please enter your choise");
+alert(getWinner(Player1choice,"rock"));
